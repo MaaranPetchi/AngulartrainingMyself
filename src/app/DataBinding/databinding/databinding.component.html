@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">String Interpolation</h1>
+        <small>Its display the data from the ts file</small>
+        <p>{{servername}}</p>
+    </div>
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">Property Binding </h1>
+        <small>Its contains the property and how to work </small>
+        <button class="btn btn-primary" [disabled]="!allownewserver">Allow new server</button>
+    </div>
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+
+        <h1 style="text-align: center;">Event Binding </h1>
+        <small>Its react to user when the user get and post the data</small>
+        <button class="btn btn-warning" (click)="onchangeevent()">Click</button>
+        <p>{{serverrcreation}}</p>
+    </div>
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+
+        <h1 style="text-align: center;">Passing and using twoway binding </h1>
+        <small>Its gather information what we enter in the input field and store it in the $event argument under input DOM</small>
+ <input type="text"  (input)="onserverupdate($event)" name="" id="">
+        <p>{{serverupdate}}</p>
+    </div>
+</div>
+
+
+<!------------------------------------Assignment----------------------------------------->
+<div class="container">
+<p>Assignment</p>
+<input type="text" class="form-control" [(ngModel)]="username" name="" id="">
+<p>{{username}}</p>
+<button class="btn btn-primary" [disabled]="username === ''" (click)=" username = ' '">Reset</button>
+</div>
